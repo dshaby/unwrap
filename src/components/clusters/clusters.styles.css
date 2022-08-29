@@ -1,0 +1,66 @@
+.all-clusters {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  max-height: 400px;
+  overflow: scroll;
+}
+
+.cluster-structure {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 26%);
+  list-style: none;
+  margin: 0 auto;
+  max-width: 40rem;
+  padding: 1rem;
+  width: 90%;
+}
+
+#unClustered-heading {
+  margin: 50px;
+}
+
+.all-unClustered-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  max-height: 400px;
+  overflow: scroll;
+  margin-bottom: 200px;
+}
+
+.single-unClustered-container {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 26%);
+  list-style: none;
+  margin: 0 auto;
+  max-width: 40rem;
+  padding: 1rem;
+  width: 90%;
+}
+
+.buttons-container {
+  border-bottom: 1px solid #ccc;
+  padding: 1rem;
+  text-align: center;
+  padding-top: 0;
+}
+
+.button {
+  border: 1px solid #f05;
+  border-radius: 4px;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  margin-right: 1rem;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+}
+
+.reset-button {
+  background: transparent;
+  color: #f05;
+}

@@ -1,6 +1,6 @@
-import { feedback_clusters } from "../data/feedback_clusters";
-import { feedback_sentences } from "../data/feedback_sentences";
-import { sentence_cluster_mapping } from "../data/sentence_cluster_mapping";
+import { feedback_clusters } from "./feedback_clusters";
+import { feedback_sentences } from "./feedback_sentences";
+import { sentence_cluster_mapping } from "./sentence_cluster_mapping";
 
 // Adding two new arrays to each cluster
 const clustersWithArrays = feedback_clusters.map((cluster) => ({

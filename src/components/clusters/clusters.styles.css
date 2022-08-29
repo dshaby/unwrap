@@ -60,7 +60,11 @@
   text-decoration: none;
 }
 
-.reset-button {
+.inverted-button {
   background: transparent;
   color: #f05;
+}
+
+.acceptance-status {
+  margin: 10px;
 }

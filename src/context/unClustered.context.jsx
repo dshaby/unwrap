@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { unClusteredSentences as sentences } from "../components/test";
+import { unClusteredSentences as sentences } from "../data/data-transformation";
 
 export const UnClusteredContext = createContext({
   unClusteredSentences: sentences,

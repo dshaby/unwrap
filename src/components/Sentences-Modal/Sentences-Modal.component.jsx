@@ -61,6 +61,7 @@ const SentencesModal = ({ title, sentences, isOpenHandler, clusterID }) => {
           >
             <p>{sentenceMap.sentence}</p>
             <button
+              className="button"
               type="button"
               onClick={() =>
                 removeSentenceFromCluster(
@@ -69,7 +70,7 @@ const SentencesModal = ({ title, sentences, isOpenHandler, clusterID }) => {
                 )
               }
             >
-              Remove Sentence from Cluster
+              Remove Above Sentence from Cluster
             </button>
           </div>
         ))}

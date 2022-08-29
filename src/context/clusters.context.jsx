@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { clustersWithSentences } from "../components/test";
+import { clustersWithSentences } from "../data/data-transformation";
 
 export const ClustersContext = createContext({
   clusters: clustersWithSentences,

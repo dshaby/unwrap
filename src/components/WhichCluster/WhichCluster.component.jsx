@@ -2,6 +2,7 @@ import { Fragment, useContext, useState } from "react";
 import { ClustersContext } from "../../context/clusters.context";
 import { UnClusteredContext } from "../../context/unClustered.context";
 import SearchBox from "../SearchBox/SearchBox.component";
+import "../clusters/clusters.styles.css";
 
 const WhichCluster = ({ sentenceToAdd, isOpenHandler }) => {
   const { sentenceID, sentence } = sentenceToAdd;
@@ -53,9 +54,10 @@ const WhichCluster = ({ sentenceToAdd, isOpenHandler }) => {
           <h5>{cluster.title}</h5>
           <button
             type="button"
+            className="button"
             onClick={() => addSentenceToCluster(cluster.id)}
           >
-            ADD TO THIS CLUSTER
+            Add To Above Cluster
           </button>
         </Fragment>
       ))}

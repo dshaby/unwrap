@@ -113,7 +113,7 @@ const Clusters = () => {
         </button>
         <button
           type="reset"
-          className="reset-button button"
+          className="inverted-button button"
           onClick={resetFilters}
         >
           View ALL Clusters
@@ -125,12 +125,13 @@ const Clusters = () => {
             <h3>{cluster.title}</h3>
 
             {cluster.accepted === "1" ? (
-              <span>ACCEPTED</span>
+              <span className="acceptance-status">ACCEPTED</span>
             ) : (
-              <span>NOT ACCEPTED</span>
+              <span className="acceptance-status">NOT ACCEPTED</span>
             )}
             <button
               type="button"
+              className="button"
               onClick={() =>
                 editClusterOnClickHandler(cluster.id, cluster.accepted)
               }
@@ -142,7 +143,11 @@ const Clusters = () => {
               )}
             </button>
 
-            <button type="button" onClick={() => titleClickHandler(cluster.id)}>
+            <button
+              type="button"
+              onClick={() => titleClickHandler(cluster.id)}
+              className="inverted-button button"
+            >
               SHOW SENTENCES
             </button>
           </div>
@@ -159,6 +164,13 @@ const Clusters = () => {
 
       <h2 id="unClustered-heading">UNCLUSTERED SENTENCES</h2>
 
+      {isAddingSentenceToCluster && (
+        <WhichCluster
+          sentenceToAdd={sentenceToAdd}
+          isOpenHandler={() => setIsAddingSentenceToCluster()}
+        />
+      )}
+
       <SearchBox
         className="UnClustered-Search-box"
         placeholder="Search UnClustered Sentences"
@@ -166,18 +178,13 @@ const Clusters = () => {
         onChangeHandler={(e) => onUnClusteredSearchChange(e)}
       />
 
-      {isAddingSentenceToCluster && (
-        <WhichCluster
-          sentenceToAdd={sentenceToAdd}
-          isOpenHandler={() => setIsAddingSentenceToCluster()}
-        />
-      )}
       <div className="all-unClustered-container">
         {filteredUnClusteredSentences.map((sentenceMap) => (
           <div className="single-unClustered-container" key={sentenceMap.id}>
             <p>{sentenceMap.sentence}</p>
             <button
               type="button"
+              className="button"
               onClick={() =>
                 addSentenceToCluster(sentenceMap.id, sentenceMap.sentence)
               }
